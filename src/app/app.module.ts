@@ -25,8 +25,13 @@ import { YayasanBarangPage } from '../pages/yayasan-barang/yayasan-barang';
 import { RegisterPage } from '../pages/register/register';
 import { CariYayasanPage } from '../pages/cari-yayasan/cari-yayasan';
 import { Detail2Page } from '../pages/detail2/detail2';
-
-
+import { LoginYayasanPage } from '../pages/login-yayasan/login-yayasan';
+import { RegisterYayasanPage } from '../pages/register-yayasan/register-yayasan';
+import { SettingsPage } from '../pages/settings/settings';
+import { HistoryPage } from '../pages/history/history';
+import { SumbanganPage } from '../pages/sumbangan/sumbangan';
+import { TabsYayasanPage } from '../pages/tabs-yayasan/tabs-yayasan';
+import { Home1Page } from '../pages/home1/home1';
 
 
 
@@ -60,7 +65,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     YayasanBarangPage,
     RegisterPage,
     CariYayasanPage,
-    Detail2Page
+    Detail2Page,
+    LoginYayasanPage,
+    RegisterYayasanPage,
+    SettingsPage,
+    SumbanganPage,
+    HistoryPage,
+    TabsYayasanPage,
+    Home1Page
   ],
   imports: [
     BrowserModule,
@@ -87,7 +99,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     YayasanBarangPage,
     RegisterPage,
     CariYayasanPage,
-    Detail2Page
+    Detail2Page,
+    LoginYayasanPage,
+    RegisterYayasanPage,
+    SettingsPage,
+    SumbanganPage,
+    HistoryPage,
+    TabsYayasanPage,
+    Home1Page
   ],
   providers: [
     StatusBar, //save data

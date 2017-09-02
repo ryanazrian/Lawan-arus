@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { YayasanJenisPage } from '../yayasan-jenis/yayasan-jenis';
+//import { YayasanJenisPage } from '../yayasan-jenis/yayasan-jenis';
+import { TabsYayasanPage } from '../tabs-yayasan/tabs-yayasan';
 
 
 /**
@@ -26,7 +27,7 @@ export class YayasanKebutuhanPage {
   kebutuhan(){
 
   //this.navCtrl.setRoot(YayasanKebutuhanPage);
-    this.navCtrl.push(YayasanJenisPage);
+    this.navCtrl.push(TabsYayasanPage);
 
   }
 

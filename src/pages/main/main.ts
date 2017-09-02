@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { YayasanKebutuhanPage } from '../yayasan-kebutuhan/yayasan-kebutuhan';
+import { LoginYayasanPage } from '../login-yayasan/login-yayasan';
 
 
 
@@ -34,7 +34,7 @@ export class MainPage {
 
    yayasan(){
 
-  this.navCtrl.setRoot(YayasanKebutuhanPage);
+  this.navCtrl.setRoot(LoginYayasanPage);
     //this.navCtrl.push(TabsPage);
 
   }

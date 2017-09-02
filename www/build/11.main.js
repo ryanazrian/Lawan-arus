@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 327:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail2__ = __webpack_require__(108);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Detail2PageModule", function() { return Detail2PageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(52);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var Detail2PageModule = (function () {
-    function Detail2PageModule() {
+var LoginPageModule = (function () {
+    function LoginPageModule() {
     }
-    return Detail2PageModule;
+    return LoginPageModule;
 }());
-Detail2PageModule = __decorate([
+LoginPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__detail2__["a" /* Detail2Page */],
+            __WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__detail2__["a" /* Detail2Page */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__detail2__["a" /* Detail2Page */]
+            __WEBPACK_IMPORTED_MODULE_2__login__["a" /* LoginPage */]
         ]
     })
-], Detail2PageModule);
+], LoginPageModule);
 
-//# sourceMappingURL=detail2.module.js.map
+//# sourceMappingURL=login.module.js.map
 
 /***/ })
 

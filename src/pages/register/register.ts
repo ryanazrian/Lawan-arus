@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { TabsPage } from '../tabs/tabs';
+import { TabsYayasanPage } from '../tabs-yayasan/tabs-yayasan';
 
 
 /**
@@ -59,7 +59,7 @@ export class RegisterPage {
   daftar(){
 
   //this.navCtrl.setRoot(TabsPage);
-    this.navCtrl.push(TabsPage);
+    this.navCtrl.push(TabsYayasanPage);
 
   }
 
