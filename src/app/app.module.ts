@@ -33,6 +33,15 @@ import { SumbanganPage } from '../pages/sumbangan/sumbangan';
 import { TabsYayasanPage } from '../pages/tabs-yayasan/tabs-yayasan';
 import { Home1Page } from '../pages/home1/home1';
 import { YayasanPostPage } from '../pages/yayasan-post/yayasan-post';
+import { LoginKurirPage } from '../pages/login-kurir/login-kurir';
+import { RegisterKurirPage } from '../pages/register-kurir/register-kurir';
+import { KurirPilihPage } from '../pages/kurir-pilih/kurir-pilih';
+import { History2Page } from '../pages/history2/history2';
+import { Home2Page } from '../pages/home2/home2';
+import { KurirPage } from '../pages/kurir/kurir';
+import { TabsKurirPage } from '../pages/tabs-kurir/tabs-kurir';
+import { Settings2Page } from '../pages/settings2/settings2';
+
 
 
 
@@ -71,7 +80,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoryPage,
     TabsYayasanPage,
     Home1Page,
-    YayasanPostPage
+    YayasanPostPage,
+    LoginKurirPage,
+    RegisterKurirPage,
+    KurirPilihPage,
+    History2Page,
+    Home2Page,
+    KurirPage,
+    TabsKurirPage,
+    Settings2Page
   ],
   imports: [
     BrowserModule,
@@ -106,7 +123,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoryPage,
     TabsYayasanPage,
     Home1Page,
-    YayasanPostPage
+    YayasanPostPage,
+    LoginKurirPage,
+    RegisterKurirPage,
+    KurirPilihPage,
+    History2Page,
+    Home2Page,
+    KurirPage,
+    TabsKurirPage,
+    Settings2Page
   ],
   providers: [
     StatusBar, //save data

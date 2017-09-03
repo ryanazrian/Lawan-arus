@@ -24625,6 +24625,32 @@ page-history .back-button {
   color: #fff !important;
 }
 
+page-history2 .item p {
+  overflow: inherit;
+  margin: 0 0 2px;
+  font-size: 1.4rem;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #6E0021;
+}
+
+page-history2 .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-history2 .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-history2 .back-button {
+  color: #fff !important;
+}
+
 page-home .toolbar-background {
   background: #fff;
   border-color: transparent;
@@ -24795,6 +24821,48 @@ page-home1 .note {
   font-size: 2rem;
 }
 
+page-kurir-pilih ion-content img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+page-kurir-pilih .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-kurir-pilih .item-ios {
+  position: relative;
+  padding-left: 1px;
+  border-radius: 0;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #91AEC3;
+  transition: background-color 200ms linear;
+}
+
+page-kurir-pilih .item-md {
+  position: relative;
+  padding-right: 0;
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  background-color: #91aec3;
+  box-shadow: none;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-kurir-pilih .list-ios > .item-block:first-child {
+  border-top: 0px solid #c8c7cc;
+}
+
+page-kurir-pilih .list-md .item-block .item-inner {
+  border-bottom: 1px solid #adadad;
+}
+
 page-list .item p {
   overflow: inherit;
   margin: 0 0 2px;
@@ -24886,6 +24954,83 @@ page-login .list-md .item-input:last-child {
 }
 
 page-login .item-md {
+  position: relative;
+  padding-right: 0;
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  background-color: #91aec3;
+  box-shadow: none;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-login-kurir ion-content img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+page-login-kurir .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-login-kurir .item-ios {
+  position: relative;
+  padding-left: 1px;
+  border-radius: 0;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #91AEC3;
+  transition: background-color 200ms linear;
+}
+
+page-login-kurir .item-md {
+  position: relative;
+  padding-right: 0;
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #000;
+  background-color: #91aec3;
+  box-shadow: none;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-login-kurir .list-ios > .item-block:first-child {
+  border-top: 0px solid #c8c7cc;
+}
+
+page-login-kurir .grid {
+  padding: 6px;
+  margin-left: 50px;
+  margin-right: auto;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+page-login-kurir .content-ios {
+  color: #828282;
+  background-color: #fff;
+}
+
+page-login-kurir .list-md .item-block .item-inner {
+  border-bottom: 1px solid #adadad;
+}
+
+page-login-kurir .list-md .item-input:last-child {
+  border-bottom: 1px solid #adadad;
+}
+
+page-login-kurir .item-md {
   position: relative;
   padding-right: 0;
   padding-left: 1px;
@@ -25129,6 +25274,48 @@ page-register .list-md .item-block .item-inner {
   border-bottom: 1px solid #adadad;
 }
 
+page-register-kurir ion-content img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+page-register-kurir .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-register-kurir .item-ios {
+  position: relative;
+  padding-left: 1px;
+  border-radius: 0;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #91AEC3;
+  transition: background-color 200ms linear;
+}
+
+page-register-kurir .item-md {
+  position: relative;
+  padding-right: 0;
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  background-color: #91aec3;
+  box-shadow: none;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-register-kurir .list-ios > .item-block:first-child {
+  border-top: 0px solid #c8c7cc;
+}
+
+page-register-kurir .list-md .item-block .item-inner {
+  border-bottom: 1px solid #adadad;
+}
+
 page-register-yayasan ion-content img {
   display: block;
   width: 60vw;
@@ -25169,6 +25356,29 @@ page-register-yayasan .list-ios > .item-block:first-child {
 
 page-register-yayasan .list-md .item-block .item-inner {
   border-bottom: 1px solid #adadad;
+}
+
+page-settings2 ion-card img {
+  display: block;
+  width: 40vw;
+  margin: auto;
+}
+
+page-settings2 .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-settings2 .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-settings2 .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
 }
 
 page-single-item .scroll-content {
