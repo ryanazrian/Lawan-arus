@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailPage } from '../detail/detail';
 
 /**
  * Generated class for the Home1Page page.
@@ -14,20 +15,17 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 })
 export class Home1Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Home1Page');
   }
 
-      doAlert() {
-    let alert = this.alerCtrl.create({
-      title: 'Terima Kasih',
-      message: 'Tunggu donatur untuk menyumbang ke anda',
-      buttons: ['Ok']
-    });
-    alert.present()
-  }
+  detail(){
 
+	//this.navCtrl.setRoot(DetailPage);
+		this.navCtrl.push(DetailPage);
+
+	}
 }

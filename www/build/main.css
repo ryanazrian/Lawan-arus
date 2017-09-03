@@ -24710,19 +24710,72 @@ page-home .note {
   font-size: 2rem;
 }
 
-page-home1 ion-card img {
+page-home1 .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-home1 .slide-zoom {
+  height: 180%;
+  width: 180%;
+}
+
+page-home1 .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-home1 ion-slides {
+  width: 100%;
+  height: 30%;
   display: block;
-  width: 40vw;
-  margin: auto;
+}
+
+page-home1 .slide-image {
+  max-width: 100%;
+  margin: 1vw 0;
+}
+
+page-home1 .slider {
+  height: 70vw;
+  /* slider height you want */
+}
+
+page-home1 .slider-slide {
+  color: #000;
+  background-color: #fff;
+  height: 100%;
+}
+
+page-home1 b {
+  font-weight: 500;
 }
 
 page-home1 .scroll-content {
   background-color: #91AEC3;
 }
 
+page-home1 .ion-card-content {
+  width: 100%;
+}
+
 page-home1 .toolbar-background {
   background: #1B607C;
   border-color: transparent;
+}
+
+page-home1 .social-cards ion-col {
+  padding: 0;
+}
+
+page-home1 .button-small {
+  padding: 0 0.9em;
+  height: 2.1em;
+  font-size: 2rem;
+}
+
+page-home1 .card .note {
+  font-size: 2rem;
+  align: right;
 }
 
 page-home1 .toolbar-title {
@@ -24731,6 +24784,15 @@ page-home1 .toolbar-title {
   text-align: center;
   color: #fff;
   pointer-events: auto;
+}
+
+page-home1 .back-button {
+  color: #fff !important;
+}
+
+page-home1 .note {
+  color: red;
+  font-size: 2rem;
 }
 
 page-list .item p {
@@ -25275,4 +25337,27 @@ page-yayasan-kebutuhan .item-md {
   background-color: #91aec3;
   box-shadow: none;
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-yayasan-post ion-card img {
+  display: block;
+  width: 40vw;
+  margin: auto;
+}
+
+page-yayasan-post .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-yayasan-post .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-yayasan-post .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
 }

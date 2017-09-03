@@ -32,9 +32,7 @@ import { HistoryPage } from '../pages/history/history';
 import { SumbanganPage } from '../pages/sumbangan/sumbangan';
 import { TabsYayasanPage } from '../pages/tabs-yayasan/tabs-yayasan';
 import { Home1Page } from '../pages/home1/home1';
-
-
-
+import { YayasanPostPage } from '../pages/yayasan-post/yayasan-post';
 
 
 
@@ -72,7 +70,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SumbanganPage,
     HistoryPage,
     TabsYayasanPage,
-    Home1Page
+    Home1Page,
+    YayasanPostPage
   ],
   imports: [
     BrowserModule,
@@ -106,7 +105,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SumbanganPage,
     HistoryPage,
     TabsYayasanPage,
-    Home1Page
+    Home1Page,
+    YayasanPostPage
   ],
   providers: [
     StatusBar, //save data
