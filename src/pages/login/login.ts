@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { TabsPage } from '../tabs/tabs';
 import { RegisterPage } from '../register/register';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { LoggedInPage } from '../logged-in/logged-in';
+//import { LoggedInPage } from '../logged-in/logged-in';
 
 
 
@@ -54,7 +54,7 @@ daftar(){
     .then( data => {
       console.log('got some data', this.fire.auth.currentUser);
       this.alert('Success! You\'re logged in');
-      this.navCtrl.setRoot( LoggedInPage );
+      this.navCtrl.setRoot( TabsPage );
       // user is logged in
     })
     .catch( error => {
