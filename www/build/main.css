@@ -12225,16 +12225,16 @@ ion-textarea {
 }
 
 .text-input::-moz-placeholder {
-  color: #999;
+  color: #767676;
 }
 
 .text-input:-ms-input-placeholder {
-  color: #999;
+  color: #767676;
 }
 
 .text-input::-webkit-input-placeholder {
   text-indent: 0;
-  color: #999;
+  color: #767676;
 }
 
 textarea.text-input {
@@ -24946,11 +24946,15 @@ page-login .content-ios {
 }
 
 page-login .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-login .list-md .item-input:last-child {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
+}
+
+page-login page-login .list-md .item-block .item-inner {
+  border-bottom: 0px solid #767676;
 }
 
 page-login .item-md {
@@ -25023,11 +25027,11 @@ page-login-kurir .content-ios {
 }
 
 page-login-kurir .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-login-kurir .list-md .item-input:last-child {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-login-kurir .item-md {
@@ -25100,7 +25104,7 @@ page-login-yayasan .content-ios {
 }
 
 page-login-yayasan .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-login-yayasan .list-md .item-input:last-child {
@@ -25267,11 +25271,11 @@ page-register .item-md {
 }
 
 page-register .list-ios > .item-block:first-child {
-  border-top: 0px solid #c8c7cc;
+  border-top: 0px solid #767676;
 }
 
 page-register .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-register-kurir ion-content img {
@@ -25309,11 +25313,11 @@ page-register-kurir .item-md {
 }
 
 page-register-kurir .list-ios > .item-block:first-child {
-  border-top: 0px solid #c8c7cc;
+  border-top: 0px solid #767676;
 }
 
 page-register-kurir .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-register-yayasan ion-content img {
@@ -25351,11 +25355,11 @@ page-register-yayasan .item-md {
 }
 
 page-register-yayasan .list-ios > .item-block:first-child {
-  border-top: 0px solid #c8c7cc;
+  border-top: 0px solid #767676;
 }
 
 page-register-yayasan .list-md .item-block .item-inner {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-settings2 ion-card img {
