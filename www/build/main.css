@@ -24821,6 +24821,176 @@ page-home1 .note {
   font-size: 2rem;
 }
 
+page-home2 .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-home2 .slide-zoom {
+  height: 180%;
+  width: 180%;
+}
+
+page-home2 .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-home2 ion-slides {
+  width: 100%;
+  height: 30%;
+  display: block;
+}
+
+page-home2 .slide-image {
+  max-width: 100%;
+  margin: 1vw 0;
+}
+
+page-home2 .slider {
+  height: 70vw;
+  /* slider height you want */
+}
+
+page-home2 .slider-slide {
+  color: #000;
+  background-color: #fff;
+  height: 100%;
+}
+
+page-home2 b {
+  font-weight: 500;
+}
+
+page-home2 .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-home2 .ion-card-content {
+  width: 100%;
+}
+
+page-home2 .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-home2 .social-cards ion-col {
+  padding: 0;
+}
+
+page-home2 .button-small {
+  padding: 0 0.9em;
+  height: 2.1em;
+  font-size: 2rem;
+}
+
+page-home2 .card .note {
+  font-size: 2rem;
+  align: right;
+}
+
+page-home2 .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-home2 .back-button {
+  color: #fff !important;
+}
+
+page-home2 .note {
+  color: red;
+  font-size: 2rem;
+}
+
+page-kurir .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-kurir .slide-zoom {
+  height: 180%;
+  width: 180%;
+}
+
+page-kurir .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-kurir ion-slides {
+  width: 100%;
+  height: 30%;
+  display: block;
+}
+
+page-kurir .slide-image {
+  max-width: 100%;
+  margin: 1vw 0;
+}
+
+page-kurir .slider {
+  height: 70vw;
+  /* slider height you want */
+}
+
+page-kurir .slider-slide {
+  color: #000;
+  background-color: #fff;
+  height: 100%;
+}
+
+page-kurir b {
+  font-weight: 500;
+}
+
+page-kurir .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-kurir .ion-card-content {
+  width: 100%;
+}
+
+page-kurir .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-kurir .social-cards ion-col {
+  padding: 0;
+}
+
+page-kurir .button-small {
+  padding: 0 0.9em;
+  height: 2.1em;
+  font-size: 2rem;
+}
+
+page-kurir .card .note {
+  font-size: 2rem;
+  align: right;
+}
+
+page-kurir .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-kurir .back-button {
+  color: #fff !important;
+}
+
+page-kurir .note {
+  color: red;
+  font-size: 2rem;
+}
+
 page-kurir-pilih ion-content img {
   display: block;
   width: 60vw;

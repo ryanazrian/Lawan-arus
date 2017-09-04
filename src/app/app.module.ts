@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
 // Http import
 import { HttpModule } from '@angular/http';
@@ -52,6 +54,15 @@ import { ItemApi } from '../services/item-api.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+const firebaseAuth = {
+    apiKey: "AIzaSyBmdA3mJHxTCx3rINnd5qxxu8o9I_Lm1yU",
+    authDomain: "sumbangin-ab4f6.firebaseapp.com",
+    databaseURL: "https://sumbangin-ab4f6.firebaseio.com",
+    projectId: "sumbangin-ab4f6",
+    storageBucket: "sumbangin-ab4f6.appspot.com",
+    messagingSenderId: "461064119857"
+  };
+
 @NgModule({
   declarations: [
     MyApp,
@@ -88,12 +99,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Home2Page,
     KurirPage,
     TabsKurirPage,
-    Settings2Page
+    Settings2Page,
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
