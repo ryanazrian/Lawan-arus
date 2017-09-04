@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 /**
@@ -15,8 +16,10 @@ import { LoginPage } from '../login/login';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
+  //nama: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app:App, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app:App, public alertCtrl: AlertController, private fire:AngularFireAuth) {
+    //this.nama = fire.auth.currentUser.nama;
   }
 
   ionViewDidLoad() {

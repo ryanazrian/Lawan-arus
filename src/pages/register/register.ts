@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { TabsYayasanPage } from '../tabs-yayasan/tabs-yayasan';
-import { AngularFireAuth } from 'angularfire2/auth'
+import { TabsPage } from '../tabs/tabs';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 
 /**
@@ -17,9 +18,12 @@ import { AngularFireAuth } from 'angularfire2/auth'
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
   @ViewChild('email') email;
   @ViewChild('password') password;
+  @ViewChild('nama') nama;
+  
+
+  donatur : FirebaseObjectObservable<any[]>;
 
 	    static MatchPassword(AC: AbstractControl) {
        let password = AC.get('password').value; // to get value in input tag
@@ -37,7 +41,7 @@ export class RegisterPage {
 	    submitAttempt: boolean = false;
 
 
-  constructor(private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+  constructor(private fire: AngularFireAuth, private firedata: AngularFireDatabase , public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, private alertCtrl: AlertController) {
     this.registerForm = formBuilder.group({
         nama: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         email: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})'), Validators.required])],
@@ -54,6 +58,13 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
+  alert(message: string) {
+    this.alertCtrl.create({
+      title: 'Info!',
+      subTitle: message,
+      buttons: ['OK']
+    }).present();
+  }
  /* daftar(){
 
   //this.navCtrl.setRoot(TabsPage);
@@ -63,13 +74,18 @@ export class RegisterPage {
   daftar(){
     this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value)
     .then(data => {
+      const donatur = this.firedata.object('/data_donatur/'+ data.uid);
+      donatur.set({id:data.uid, name: this.nama.value, email: this.email.value})
       console.log('got data', data);
+      this.alert('Registered!');
+      this.navCtrl.setRoot(TabsPage);
     })
 
     .catch (error => {
       console.log('got an error', error);
-    })
-
+      this.alert(error.message);
+    });
+      console.log('Would register user with ', this.email.value, this.password.value);
   //this.navCtrl.setRoot(TabsPage);
     //this.navCtrl.push(TabsYayasanPage);
 

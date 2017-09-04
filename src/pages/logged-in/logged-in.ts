@@ -15,11 +15,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'logged-in.html',
 })
 export class LoggedInPage {
-
   email: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fire:AngularFireAuth) {
-  	this.email = fire.auth.currentUser.email;
   }
 
   ionViewDidLoad() {
