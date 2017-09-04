@@ -43,6 +43,7 @@ import { Home2Page } from '../pages/home2/home2';
 import { KurirPage } from '../pages/kurir/kurir';
 import { TabsKurirPage } from '../pages/tabs-kurir/tabs-kurir';
 import { Settings2Page } from '../pages/settings2/settings2';
+import { LoggedInPage } from '../pages/logged-in/logged-in';
 
 
 
@@ -100,6 +101,7 @@ const firebaseAuth = {
     KurirPage,
     TabsKurirPage,
     Settings2Page,
+    LoggedInPage
   ],
   imports: [
     BrowserModule,
@@ -144,7 +146,8 @@ const firebaseAuth = {
     Home2Page,
     KurirPage,
     TabsKurirPage,
-    Settings2Page
+    Settings2Page,
+    LoggedInPage
   ],
   providers: [
     StatusBar, //save data
