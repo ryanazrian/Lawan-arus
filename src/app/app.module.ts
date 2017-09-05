@@ -45,7 +45,7 @@ import { KurirPage } from '../pages/kurir/kurir';
 import { TabsKurirPage } from '../pages/tabs-kurir/tabs-kurir';
 import { Settings2Page } from '../pages/settings2/settings2';
 import { LoggedInPage } from '../pages/logged-in/logged-in';
-
+import { EditDonaturPage } from '../pages/edit-donatur/edit-donatur';
 
 
 
@@ -102,7 +102,8 @@ const firebaseAuth = {
     KurirPage,
     TabsKurirPage,
     Settings2Page,
-    LoggedInPage
+    LoggedInPage,
+    EditDonaturPage
   ],
   imports: [
     BrowserModule,
@@ -149,7 +150,8 @@ const firebaseAuth = {
     KurirPage,
     TabsKurirPage,
     Settings2Page,
-    LoggedInPage
+    LoggedInPage,
+    EditDonaturPage
   ],
   providers: [
     StatusBar, //save data

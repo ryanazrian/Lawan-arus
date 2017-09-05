@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { TabsPage } from '../tabs/tabs';
+import { LoginPage } from '../login/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
@@ -78,7 +78,7 @@ export class RegisterPage {
       donatur.set({id:data.uid, name: this.nama.value, email: this.email.value})
       console.log('got data', data);
       this.alert('Registered!');
-      this.navCtrl.setRoot(TabsPage);
+      this.navCtrl.setRoot(LoginPage);
     })
 
     .catch (error => {

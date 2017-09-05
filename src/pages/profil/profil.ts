@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { AngularFireAuth } from 'angularfire2/auth';
-
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { EditDonaturPage } from '../edit-donatur/edit-donatur';
 
 /**
  * Generated class for the ProfilPage page.
@@ -16,10 +17,23 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
-  //nama: string;
+  nama: string;
+  email: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app:App, public alertCtrl: AlertController, private fire:AngularFireAuth) {
-    //this.nama = fire.auth.currentUser.nama;
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public app:App, 
+              public alertCtrl: AlertController, 
+              private fire:AngularFireAuth, 
+              private firedata: AngularFireDatabase,
+
+              ) {
+                var user = this.fire.auth.currentUser;
+                const donatur = this.firedata.object('/data_donatur/'+user.uid).subscribe(data =>{
+                   this.nama = data.name;
+                   this.email = data.email;
+                 }
+                  )
   }
 
   ionViewDidLoad() {
@@ -34,32 +48,8 @@ export class ProfilPage {
 	}
 
      edit() {
-    let prompt = this.alertCtrl.create({
-      title: 'Edit',
-      inputs: [
-        {
-          name: 'title',
-          placeholder: 'Title'
-        },
-      ],
-
-
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: data => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            console.log('Saved clicked');
-          }
-        }
-      ]
-    });
-    prompt.present();
+       //this.app.getRootNav().setRoot(LoginPage);
+    this.navCtrl.push(EditDonaturPage);
   }
 
 }

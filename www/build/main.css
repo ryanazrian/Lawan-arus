@@ -24599,6 +24599,33 @@ page-detail2 .toolbar-title {
   pointer-events: auto;
 }
 
+page-edit-donatur ion-card img {
+  display: block;
+  width: 40vw;
+  margin: auto;
+}
+
+page-edit-donatur .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-edit-donatur .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-edit-donatur .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-edit-donatur .back-button {
+  color: #fff !important;
+}
+
 page-history .item p {
   overflow: inherit;
   margin: 0 0 2px;
