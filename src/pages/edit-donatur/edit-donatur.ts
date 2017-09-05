@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+
+import { ProfilPage } from '../profil/profil';
 /**
  * Generated class for the EditDonaturPage page.
  *
@@ -16,7 +18,7 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
 })
 export class EditDonaturPage {
 	nama:string;
-	email:string;
+	//email:string;
 
   constructor(public navCtrl: NavController,
   			  public navParams: NavParams,
@@ -27,14 +29,24 @@ export class EditDonaturPage {
 
   			  ) {
   				var user = this.fire.auth.currentUser;
-  				const donatur = this.firedata.object('/data_donatur/'+user.uid).subscribe(data=>{
+  				this.firedata.object('/data_donatur/'+user.uid).subscribe(data=>{
   					this.nama = data.name;
-  					this.email = data.email;
+  					//this.email = data.email;
   				})
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditDonaturPage');
+  }
+
+  edit(){
+  		var user = this.fire.auth.currentUser;
+  		this.firedata.object('/data_donatur/'+user.uid).update({
+  			name: this.nama
+
+  		});
+  		this.navCtrl.setRoot(ProfilPage);
+
   }
 
 }
