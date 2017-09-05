@@ -24,17 +24,22 @@
         <ion-input type="text" [(ngModel)]="nama" name="nama" value="{{nama}}"></ion-input>
       </ion-item>
 
-  		<ion-item>
-		    <ion-label stacked>Alamat</ion-label>
-		    <ion-input type="text" value="Dramaga Bogor" ></ion-input>
-  		</ion-item>
+      <ion-item>
+        <ion-label stacked>Nama</ion-label>
+        <ion-input type="text" [(ngModel)]="alamat" name="alamat" value="{{alamat}}"></ion-input>
+      </ion-item>
 
   		<ion-item>
 		    <ion-label stacked>No. Hp</ion-label>
-		    <ion-input type="text" value="085373318178"></ion-input>
+		    <ion-input type="text" value="{{hp}}"></ion-input>
   		</ion-item>
 
+     
+        <ion-item>
+          <button class="button1" text-center ion-button (click)="changeFoto()"> Ubah Foto Profil </button>
+        </ion-item>   
 
+     
 
       </ion-card-title>
 

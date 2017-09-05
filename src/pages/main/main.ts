@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { LoginPage } from '../login-donatur/login';
 import { LoginYayasanPage } from '../login-yayasan/login-yayasan';
 import { LoginKurirPage } from '../login-kurir/login-kurir';
 
