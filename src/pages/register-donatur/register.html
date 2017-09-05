@@ -42,6 +42,16 @@
 		  <p *ngIf="registerForm.controls.password1.errors?.MatchPassword" style="color: red; font-size: 12px;">Password not match</p>
 		  <br>
 
+		  <ion-item>
+		    <ion-textarea type="text" value="" Placeholder="Alamat" #alamat></ion-textarea>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-input formControlName="hp" name="hp" type="text" value="" Placeholder="No. Hp" #hp></ion-input>
+		  </ion-item>
+
+		  <p *ngIf="!registerForm.controls.hp.valid  && (registerForm.controls.hp.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid number.</p>
+		  <br>
 		  	<div padding>
     	<button ion-button color="secondary" type="submit" block (click)='daftar()'>Daftar</button>
   	</div>	

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { LoginPage } from '../login-donatur/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { EditDonaturPage } from '../edit-donatur/edit-donatur';
@@ -19,6 +19,8 @@ import { EditDonaturPage } from '../edit-donatur/edit-donatur';
 export class ProfilPage {
   nama: string;
   email: string;
+  alamat: string;
+  hp: string;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
@@ -32,6 +34,8 @@ export class ProfilPage {
                 const donatur = this.firedata.object('/data_donatur/'+user.uid).subscribe(data =>{
                    this.nama = data.name;
                    this.email = data.email;
+                   this.alamat = data.alamat;
+                   this.hp = data.hp;
                  }
                   )
   }

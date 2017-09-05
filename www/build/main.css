@@ -24614,6 +24614,12 @@ page-edit-donatur .toolbar-background {
   border-color: transparent;
 }
 
+page-edit-donatur .button1 {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+}
+
 page-edit-donatur .toolbar-title {
   font-size: 2.3rem;
   font-weight: 600;
@@ -25305,7 +25311,7 @@ page-login-yayasan .list-md .item-block .item-inner {
 }
 
 page-login-yayasan .list-md .item-input:last-child {
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #767676;
 }
 
 page-login-yayasan .item-md {

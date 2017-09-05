@@ -18,6 +18,8 @@ import { ProfilPage } from '../profil/profil';
 })
 export class EditDonaturPage {
 	nama:string;
+  alamat:string;
+  hp:string;
 	//email:string;
 
   constructor(public navCtrl: NavController,
@@ -31,6 +33,8 @@ export class EditDonaturPage {
   				var user = this.fire.auth.currentUser;
   				this.firedata.object('/data_donatur/'+user.uid).subscribe(data=>{
   					this.nama = data.name;
+            this.alamat= data.alamat;
+            this.hp = data.hp;
   					//this.email = data.email;
   				})
   }
@@ -42,11 +46,17 @@ export class EditDonaturPage {
   edit(){
   		var user = this.fire.auth.currentUser;
   		this.firedata.object('/data_donatur/'+user.uid).update({
-  			name: this.nama
+  			name: this.nama,
+        alamat: this.alamat,
+        hp:this.hp
 
   		});
   		this.navCtrl.setRoot(ProfilPage);
 
+  }
+
+  changeFoto(){
+      this.navCtrl.push(ProfilPage); //nanti masukin  changePhotoPage
   }
 
 }

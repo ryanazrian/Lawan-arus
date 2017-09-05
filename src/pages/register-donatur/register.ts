@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-import { LoginPage } from '../login/login';
+import { LoginPage } from '../login-donatur/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
@@ -21,6 +21,8 @@ export class RegisterPage {
   @ViewChild('email') email;
   @ViewChild('password') password;
   @ViewChild('nama') nama;
+  @ViewChild('alamat') alamat;
+  @ViewChild('hp') hp;
   
 
   donatur : FirebaseObjectObservable<any[]>;
@@ -44,6 +46,7 @@ export class RegisterPage {
   constructor(private fire: AngularFireAuth, private firedata: AngularFireDatabase , public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, private alertCtrl: AlertController) {
     this.registerForm = formBuilder.group({
         nama: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        hp: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[0-9]*'), Validators.required])],
         email: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})'), Validators.required])],
         password: ['', Validators.compose([Validators.maxLength(15), Validators.minLength(6)  , Validators.required])],
         password1: ['']
@@ -75,7 +78,7 @@ export class RegisterPage {
     this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value)
     .then(data => {
       const donatur = this.firedata.object('/data_donatur/'+ data.uid);
-      donatur.set({id:data.uid, name: this.nama.value, email: this.email.value})
+      donatur.set({id:data.uid, name: this.nama.value, email: this.email.value, alamat:this.alamat.value, hp:this.hp.value})
       console.log('got data', data);
       this.alert('Registered!');
       this.navCtrl.setRoot(LoginPage);
