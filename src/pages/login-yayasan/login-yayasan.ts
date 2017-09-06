@@ -52,7 +52,7 @@ export class LoginYayasanPage {
          this.data.login(data, "data_donatur");
        })
          this.alert("Login Sukses");
-         this.navCtrl.push(TabsYayasanPage);
+         this.navCtrl.push(TabsYayasanPage)
     })
     .catch( error => {
       console.log('got an error', error);
