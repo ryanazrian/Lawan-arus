@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { HistoryPage } from '../history/history';
-import { ProfilPage } from '../profil/profil';
+import { ProfilYayasanPage } from '../profil-yayasan/profil-yayasan';
 import { Home1Page } from '../home1/home1';
 import { YayasanPostPage } from '../yayasan-post/yayasan-post';
 //import { SumbanganPage } from '../sumbangan/sumbangan';
@@ -14,7 +14,7 @@ export class TabsYayasanPage {
   tab1Root = Home1Page;
   tab2Root = YayasanPostPage;
   tab3Root = HistoryPage;
-  tab4Root = ProfilPage;
+  tab4Root = ProfilYayasanPage;
 
   constructor() {
 

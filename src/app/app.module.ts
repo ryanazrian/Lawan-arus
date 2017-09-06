@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { IonicStorageModule } from '@ionic/storage'; 
 
 // Http import
 import { HttpModule } from '@angular/http';
@@ -46,8 +47,9 @@ import { TabsKurirPage } from '../pages/tabs-kurir/tabs-kurir';
 import { Settings2Page } from '../pages/settings2/settings2';
 import { LoggedInPage } from '../pages/logged-in/logged-in';
 import { EditDonaturPage } from '../pages/edit-donatur/edit-donatur';
-
-
+import { ProfilYayasanPage } from '../pages/profil-yayasan/profil-yayasan';
+import { EditYayasanPage } from '../pages/edit-yayasan/edit-yayasan';
+import { Data } from '../providers/data';
 
 // Service imports
 import { ItemApi } from '../services/item-api.service';
@@ -103,7 +105,9 @@ const firebaseAuth = {
     TabsKurirPage,
     Settings2Page,
     LoggedInPage,
-    EditDonaturPage
+    EditDonaturPage,
+    ProfilYayasanPage,
+    EditYayasanPage
   ],
   imports: [
     BrowserModule,
@@ -111,7 +115,8 @@ const firebaseAuth = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -151,13 +156,16 @@ const firebaseAuth = {
     TabsKurirPage,
     Settings2Page,
     LoggedInPage,
-    EditDonaturPage
+    EditDonaturPage,
+    ProfilYayasanPage,
+    EditYayasanPage
   ],
   providers: [
     StatusBar, //save data
     SplashScreen,
     ItemApi,
     HttpModule,
+    Data,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

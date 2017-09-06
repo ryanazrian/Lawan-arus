@@ -1,14 +1,14 @@
 webpackJsonp([21],{
 
-/***/ 486:
+/***/ 498:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home2__ = __webpack_require__(158);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Home2PageModule", function() { return Home2PageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__kurir_pilih__ = __webpack_require__(164);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KurirPilihPageModule", function() { return KurirPilihPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var Home2PageModule = (function () {
-    function Home2PageModule() {
+var KurirPilihPageModule = (function () {
+    function KurirPilihPageModule() {
     }
-    return Home2PageModule;
+    return KurirPilihPageModule;
 }());
-Home2PageModule = __decorate([
+KurirPilihPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__home2__["a" /* Home2Page */],
+            __WEBPACK_IMPORTED_MODULE_2__kurir_pilih__["a" /* KurirPilihPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home2__["a" /* Home2Page */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__kurir_pilih__["a" /* KurirPilihPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__home2__["a" /* Home2Page */]
+            __WEBPACK_IMPORTED_MODULE_2__kurir_pilih__["a" /* KurirPilihPage */]
         ]
     })
-], Home2PageModule);
+], KurirPilihPageModule);
 
-//# sourceMappingURL=home2.module.js.map
+//# sourceMappingURL=kurir-pilih.module.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 494:
+/***/ 506:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main__ = __webpack_require__(163);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPageModule", function() { return MainPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profil_yayasan__ = __webpack_require__(92);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilYayasanPageModule", function() { return ProfilYayasanPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MainPageModule = (function () {
-    function MainPageModule() {
+var ProfilYayasanPageModule = (function () {
+    function ProfilYayasanPageModule() {
     }
-    return MainPageModule;
+    return ProfilYayasanPageModule;
 }());
-MainPageModule = __decorate([
+ProfilYayasanPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__main__["a" /* MainPage */],
+            __WEBPACK_IMPORTED_MODULE_2__profil_yayasan__["a" /* ProfilYayasanPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__main__["a" /* MainPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profil_yayasan__["a" /* ProfilYayasanPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__main__["a" /* MainPage */]
+            __WEBPACK_IMPORTED_MODULE_2__profil_yayasan__["a" /* ProfilYayasanPage */]
         ]
     })
-], MainPageModule);
+], ProfilYayasanPageModule);
 
-//# sourceMappingURL=main.module.js.map
+//# sourceMappingURL=profil-yayasan.module.js.map
 
 /***/ })
 

@@ -22,10 +22,10 @@ export class Home1Page {
     console.log('ionViewDidLoad Home1Page');
   }
 
-  detail(){
+/*  detail(){
 
 	//this.navCtrl.setRoot(DetailPage);
 		this.navCtrl.push(DetailPage);
 
-	}
+	}*/
 }

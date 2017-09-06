@@ -4,8 +4,8 @@ import { Http } from '@angular/http';
 
 // Import pages to allow links to the page
 // import { SingleItem } from '../../pages/single-item/single-item';
-import { PeminatPage } from '../../pages/peminat/peminat';
-
+//import { PeminatPage } from '../../pages/peminat/peminat';
+import { Detail1Page } from '../../pages/detail1/detail1';
 
 // Service import for items
 import { ItemApi } from '../../services/service';
@@ -88,7 +88,7 @@ export class HistoryPage {
   // This function is an event to listen to clicks on elements.
   // The SingleItem Page has been included to be passed in this function.
   itemTapped($event, item) {
-    this.navCtrl.push(PeminatPage);
+    this.navCtrl.push(Detail1Page);
   }
 
 }

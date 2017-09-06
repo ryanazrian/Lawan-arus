@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login-donatur/login';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { EditDonaturPage } from '../edit-donatur/edit-donatur';
 
 /**
@@ -45,9 +45,9 @@ export class ProfilPage {
   }
 
   keluar(){
-
-	this.app.getRootNav().setRoot(LoginPage);
-		//this.navCtrl.push(LoginPage);
+    this.fire.auth.signOut;
+  	this.app.getRootNav().setRoot(LoginPage);
+  		//this.navCtrl.push(LoginPage);
 
 	}
 

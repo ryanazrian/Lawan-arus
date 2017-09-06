@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { TabsPage } from '../tabs-donatur/tabs';
 import { RegisterPage } from '../register-donatur/register';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { Data } from '../../providers/data';
+import { Http } from '@angular/http';
+import { AngularFireDatabase } from 'angularfire2/database';
 //import { LoggedInPage } from '../logged-in/logged-in';
 
 
@@ -22,7 +25,13 @@ export class LoginPage {
   @ViewChild('email') email;
   @ViewChild('password') password;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private fire:AngularFireAuth) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public alertCtrl: AlertController, 
+              private fire:AngularFireAuth, 
+              private firedata: AngularFireDatabase,
+              public data: Data,
+              ) {
   }
 
   ionViewDidLoad() {
@@ -51,11 +60,14 @@ daftar(){
 
     login() {
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
-    .then( data => {
-      console.log('got some data', this.fire.auth.currentUser);
-      this.alert('Success! You\'re logged in');
-      this.navCtrl.setRoot( TabsPage );
-      // user is logged in
+    .then( user => {
+       this.firedata.object('/data_donatur/'+ user.uid).subscribe(data =>{
+         console.log(data);
+         this.data.login(data, "data_donatur");
+
+       })
+         this.alert('Success! You\'re logged in');
+         this.navCtrl.push(TabsPage);
     })
     .catch( error => {
       console.log('got an error', error);

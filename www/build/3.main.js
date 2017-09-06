@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 504:
+/***/ 516:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__yayasan_barang__ = __webpack_require__(168);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YayasanBarangPageModule", function() { return YayasanBarangPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__yayasan_jenis__ = __webpack_require__(359);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YayasanJenisPageModule", function() { return YayasanJenisPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var YayasanBarangPageModule = (function () {
-    function YayasanBarangPageModule() {
+var YayasanJenisPageModule = (function () {
+    function YayasanJenisPageModule() {
     }
-    return YayasanBarangPageModule;
+    return YayasanJenisPageModule;
 }());
-YayasanBarangPageModule = __decorate([
+YayasanJenisPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__yayasan_barang__["a" /* YayasanBarangPage */],
+            __WEBPACK_IMPORTED_MODULE_2__yayasan_jenis__["a" /* YayasanJenisPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__yayasan_barang__["a" /* YayasanBarangPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__yayasan_jenis__["a" /* YayasanJenisPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__yayasan_barang__["a" /* YayasanBarangPage */]
+            __WEBPACK_IMPORTED_MODULE_2__yayasan_jenis__["a" /* YayasanJenisPage */]
         ]
     })
-], YayasanBarangPageModule);
+], YayasanJenisPageModule);
 
-//# sourceMappingURL=yayasan-barang.module.js.map
+//# sourceMappingURL=yayasan-jenis.module.js.map
 
 /***/ })
 

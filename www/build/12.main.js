@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 495:
+/***/ 507:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__peminat__ = __webpack_require__(66);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PeminatPageModule", function() { return PeminatPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profil__ = __webpack_require__(93);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilPageModule", function() { return ProfilPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PeminatPageModule = (function () {
-    function PeminatPageModule() {
+var ProfilPageModule = (function () {
+    function ProfilPageModule() {
     }
-    return PeminatPageModule;
+    return ProfilPageModule;
 }());
-PeminatPageModule = __decorate([
+ProfilPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__peminat__["a" /* PeminatPage */],
+            __WEBPACK_IMPORTED_MODULE_2__profil__["a" /* ProfilPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__peminat__["a" /* PeminatPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profil__["a" /* ProfilPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__peminat__["a" /* PeminatPage */]
+            __WEBPACK_IMPORTED_MODULE_2__profil__["a" /* ProfilPage */]
         ]
     })
-], PeminatPageModule);
+], ProfilPageModule);
 
-//# sourceMappingURL=peminat.module.js.map
+//# sourceMappingURL=profil.module.js.map
 
 /***/ })
 

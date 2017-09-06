@@ -24632,6 +24632,39 @@ page-edit-donatur .back-button {
   color: #fff !important;
 }
 
+page-edit-yayasan ion-card img {
+  display: block;
+  width: 40vw;
+  margin: auto;
+}
+
+page-edit-yayasan .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-edit-yayasan .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-edit-yayasan .button1 {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+}
+
+page-edit-yayasan .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-edit-yayasan .back-button {
+  color: #fff !important;
+}
+
 page-history .item p {
   overflow: inherit;
   margin: 0 0 2px;
@@ -25432,6 +25465,29 @@ page-profil .toolbar-background {
 }
 
 page-profil .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
+}
+
+page-profil-yayasan ion-card img {
+  display: block;
+  width: 40vw;
+  margin: auto;
+}
+
+page-profil-yayasan .scroll-content {
+  background-color: #91AEC3;
+}
+
+page-profil-yayasan .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-profil-yayasan .toolbar-title {
   font-size: 2.3rem;
   font-weight: 600;
   text-align: center;
