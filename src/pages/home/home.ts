@@ -46,7 +46,7 @@ export class HomePage {
               public BarangProvider: BarangProvider
               ) {
     //this.Fbref=firebase.storage().ref()
-    this.firedata.list('data_barang_yayasan').subscribe(data =>{
+    this.firedata.list('data_barang_yayasan/uid').subscribe(data =>{
         this.barang = data;
         console.log(this.barang);
  

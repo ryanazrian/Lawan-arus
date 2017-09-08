@@ -29,6 +29,14 @@ export class EditYayasanPage {
   			private firedata: AngularFireDatabase
 
   			) {
+
+              var user = this.fire.auth.currentUser;
+          this.firedata.object('/data_yayasan/'+user.uid).subscribe(data=>{
+            this.nama = data.name;
+            this.alamat= data.alamat;
+            this.hp = data.hp;
+            //this.email = data.email;
+          })
   }
 
   ionViewDidLoad() {
@@ -37,7 +45,7 @@ export class EditYayasanPage {
 
     edit(){
   		var user = this.fire.auth.currentUser;
-  		this.firedata.object('/data_donatur/'+user.uid).update({
+  		this.firedata.object('/data_yayasan/'+user.uid).update({
   			name: this.nama,
         alamat: this.alamat,
         hp:this.hp
