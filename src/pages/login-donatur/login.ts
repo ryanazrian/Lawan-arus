@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { TabsPage } from '../tabs-donatur/tabs';
+import { TabsYayasanPage } from '../tabs-yayasan/tabs-yayasan';
 import { RegisterPage } from '../register-donatur/register';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Data } from '../../providers/data';
@@ -24,6 +25,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class LoginPage {
   @ViewChild('email') email;
   @ViewChild('password') password;
+  @ViewChild('jenis') jenis;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
@@ -31,12 +33,14 @@ export class LoginPage {
               private fire:AngularFireAuth, 
               private firedata: AngularFireDatabase,
               public data: Data,
+              public loadingCtrl: LoadingController
               ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
+
 
     alert(message: string) {
     this.alertCtrl.create({
@@ -59,6 +63,14 @@ daftar(){
   }
 
     login() {
+
+
+    let loader = this.loadingCtrl.create({
+      content: "Memuat...",
+      duration: 3000
+    });
+    loader.present();
+    
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
     .then( user => {
        this.firedata.object('/data_donatur/'+ user.uid).subscribe(data =>{
@@ -72,7 +84,7 @@ daftar(){
     .catch( error => {
       console.log('got an error', error);
       this.alert(error.message);
-    })
+    })  
     console.log('Would sign in with ', this.email.value, this.password.value);
   }
 }

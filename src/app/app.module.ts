@@ -5,7 +5,9 @@ import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { IonicStorageModule } from '@ionic/storage'; 
+import { IonicStorageModule } from '@ionic/storage';
+import { Camera, File } from 'ionic-native';
+import { BarangProvider } from '../providers/data_barang_yayasan'; 
 
 // Http import
 import { HttpModule } from '@angular/http';
@@ -166,6 +168,8 @@ const firebaseAuth = {
     ItemApi,
     HttpModule,
     Data,
+    Camera,
+    BarangProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

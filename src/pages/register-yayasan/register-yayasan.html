@@ -15,21 +15,21 @@
 	<form [formGroup]="formone">
 
 		<ion-item>
-		    <ion-input formControlName="nama" type="text" value="" Placeholder="Nama"></ion-input>
+		    <ion-input formControlName="nama" type="text" value="" Placeholder="Nama" #nama></ion-input>
 		</ion-item>
 
                 <p *ngIf="!formone.controls.nama.valid  && (formone.controls.nama.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid name.</p>
             
           <br>
 		  <ion-item>
-		    <ion-input formControlName="email" type="text" value="" Placeholder="email"></ion-input>
+		    <ion-input formControlName="email" type="text" value="" Placeholder="email" #email></ion-input>
 		  </ion-item>
 
 		  		<p *ngIf="!formone.controls.email.valid  && (formone.controls.email.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid email.</p>
 		  <br>
 
 		  <ion-item>
-		    <ion-input formControlName="password" type="password" Placeholder="Password"></ion-input>
+		    <ion-input formControlName="password" type="password" Placeholder="Password" #password></ion-input>
 		  </ion-item>
 		  	<p *ngIf="!formone.controls.password.valid  && (formone.controls.password.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid password.</p>
 
@@ -39,7 +39,17 @@
 		    <ion-input formControlName="password1" type="password" value="" Placeholder="Re-type Password"></ion-input>
 		  </ion-item>
 
+		  <ion-item>
+		    <ion-textarea type="text" value="" Placeholder="Alamat" #alamat></ion-textarea>
+		  </ion-item>
+
 		  <p *ngIf="formone.controls.password1.errors?.MatchPassword" style="color: red; font-size: 12px;">Password not match</p>
+		  <br>
+
+		  <ion-item>
+		    <ion-input formControlName="hp" name="hp" type="text" value="" Placeholder="No. Hp" #hp></ion-input>
+		  </ion-item>
+		  	  <p *ngIf="!formone.controls.hp.valid  && (formone.controls.hp.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid number.</p>
 		  <br>
 
 	</form>

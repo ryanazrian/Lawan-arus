@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { HistoryPage } from '../history/history';
 
 /**
  * Generated class for the YayasanPostPage page.
@@ -13,8 +16,21 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
   templateUrl: 'yayasan-post.html',
 })
 export class YayasanPostPage {
+  @ViewChild('nama_barang') nama_barang;
+  // @ViewChild('jenis_barang') jenis_barang;
+  @ViewChild('berat_barang') berat_barang;
+  @ViewChild('volume_barang') volume_barang;
+  @ViewChild('keterangan') keterangan;
+  jenis_barang:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController) {
+  yayasan: FirebaseObjectObservable<any[]>
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public alerCtrl: AlertController,
+              private fire:AngularFireAuth,
+              private firedata: AngularFireDatabase
+              ) {
   }
 
   ionViewDidLoad() {
@@ -23,9 +39,25 @@ export class YayasanPostPage {
     doAlert() {
     let alert = this.alerCtrl.create({
       title: 'Terima Kasih',
-      message: 'Terima Kasih sudah meminta sumbangan, Tunggu donatur menyumbangkan barangnya',
+      subTitle: 'Terima Kasih sudah meminta sumbangan, Tunggu donatur menyumbangkan barangnya',
       buttons: ['Ok']
-    });
-    alert.present()
+    })
+     .present()
+  }
+
+  post(){
+      var user = this.fire.auth.currentUser; 
+      this.firedata.list('/data_barang_yayasan/'+user.uid)
+        .push({ nama_barang: this.nama_barang.value, jenis_barang:this.jenis_barang, volume_barang: this.volume_barang.value, keterangan: this.keterangan.value});
+      console.log('got data', user);
+/*      console.log(this.nama_barang.value);
+      console.log(this.volume_barang.value);
+      console.log(this.berat_barang.value);
+      console.log(this.keterangan.value);
+      console.log(this.jenis_barang)*/;
+      this.doAlert();
+      this.navCtrl.push(HistoryPage)
+
+
   }
 }

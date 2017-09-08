@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { TabsYayasanPage } from '../tabs-yayasan/tabs-yayasan';
 import { RegisterYayasanPage } from '../register-yayasan/register-yayasan';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -27,7 +27,8 @@ export class LoginYayasanPage {
               public alertCtrl: AlertController, 
               private fire:AngularFireAuth,
               private firedata: AngularFireDatabase,
-              private data: Data
+              private data: Data,
+              public loadingCtrl: LoadingController
               ) {
   }
 
@@ -44,6 +45,11 @@ export class LoginYayasanPage {
   }
 
   login(){
+        let loader = this.loadingCtrl.create({
+      content: "Memuat...",
+      duration: 3000
+    });
+    loader.present();
 
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
     .then( user => {

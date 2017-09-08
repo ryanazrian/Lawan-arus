@@ -49,9 +49,19 @@
 		  <ion-item>
 		    <ion-input formControlName="hp" name="hp" type="text" value="" Placeholder="No. Hp" #hp></ion-input>
 		  </ion-item>
-
-		  <p *ngIf="!registerForm.controls.hp.valid  && (registerForm.controls.hp.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid number.</p>
+		  	  <p *ngIf="!registerForm.controls.hp.valid  && (registerForm.controls.hp.dirty || submitAttempt)" style="color: red; font-size: 12px;">Please enter a valid number.</p>
 		  <br>
+
+		 <!--    <ion-item>
+			    <ion-label>Jenis Akun</ion-label>
+				    <ion-select name="jenis" #jenis>
+				      <ion-option value="1">Donatur</ion-option>
+				      <ion-option value="2">Yayasan</ion-option>
+				      <ion-option value="3">Kurir</ion-option>
+				    </ion-select>
+		  </ion-item> -->
+
+	
 		  	<div padding>
     	<button ion-button color="secondary" type="submit" block (click)='daftar()'>Daftar</button>
   	</div>	

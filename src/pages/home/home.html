@@ -30,18 +30,18 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-card (click)='detail()'>
+  <ion-card *ngFor="let data of barang" (click)='detail()'>
 
-  <ion-item>
+  <ion-item >
     <ion-avatar item-left>
       <img src="assets/img/logo-fix.png">
     </ion-avatar>
-    <h2>Yayasan Sehat Semu</h2>
-    <p>Sejak November 5, 1955</p>
+    <h2>{{ data.nama_barang }}</h2>
+    <p>{{ data.jenis_barang }}</p>
   </ion-item>
 
   <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    <p>{{ data.keterangan }}</p>
   </ion-card-content>
 
   <ion-row>
@@ -55,60 +55,6 @@
   </ion-row>
 
 </ion-card>
-
-
- <ion-card (click)='detail()'>
-
-  <ion-item >
-    <ion-avatar item-left>
-      <img src="assets/img/logo-fix.png">
-    </ion-avatar>
-    <h2>Yayasan Sehat Semu</h2>
-    <p>Sejak November 5, 1955</p>
-  </ion-item>
-
-  <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
-
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col align-self-center text-center>
-      <ion-note>
-        +/- 20Km
-      </ion-note>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-
- <ion-card (click)='detail()'>
-
-  <ion-item>
-    <ion-avatar item-left>
-      <img src="assets/img/logo-fix.png">
-    </ion-avatar>
-    <h2>Yayasan Sehat Semu</h2>
-    <p>Sejak November 5, 1955</p>
-  </ion-item>
-
-  <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
-
-  <ion-row>
-    <ion-col>
-    </ion-col>
-    <ion-col align-self-center text-center>
-      <ion-note>
-        +/- 25 Km
-      </ion-note>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-
 
 
   <ion-fab right bottom>

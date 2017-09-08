@@ -25164,8 +25164,8 @@ page-login .list-ios > .item-block:first-child {
 }
 
 page-login .grid {
-  padding: 6px;
-  margin-left: 50px;
+  padding: 1vw;
+  margin-left: 13vw;
   margin-right: auto;
   width: 100%;
   display: -webkit-flex;
