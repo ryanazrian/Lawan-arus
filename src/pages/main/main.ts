@@ -28,22 +28,22 @@ export class MainPage {
 
   login(){
 
-	this.navCtrl.setRoot(LoginPage);
-		//this.navCtrl.push(TabsPage);
+	//this.navCtrl.setRoot(LoginPage);
+		this.navCtrl.push(LoginPage);
 
 	}
 
    yayasan(){
 
-  this.navCtrl.setRoot(LoginYayasanPage);
-    //this.navCtrl.push(TabsPage);
+  //this.navCtrl.setRoot(LoginYayasanPage);
+    this.navCtrl.push(LoginYayasanPage);
 
   }
 
      kurir(){
 
-  this.navCtrl.setRoot(LoginKurirPage);
-    //this.navCtrl.push(TabsPage);
+  //this.navCtrl.setRoot(LoginKurirPage);
+    this.navCtrl.push(LoginKurirPage);
 
   }
 

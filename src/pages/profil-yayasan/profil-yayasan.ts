@@ -4,7 +4,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 import { EditYayasanPage } from '../edit-yayasan/edit-yayasan';
-import { LoginYayasanPage } from '../login-yayasan/login-yayasan';
+import { MainPage } from '../main/main';
+// import { LoginYayasanPage } from '../login-yayasan/login-yayasan';
 /**
  * Generated class for the ProfilYayasanPage page.
  *
@@ -44,7 +45,7 @@ export class ProfilYayasanPage {
   }
   keluar(){
     this.fire.auth.signOut;
-    this.app.getRootNav().setRoot(LoginYayasanPage);
+    this.app.getRootNav().setRoot(MainPage);
   }
 
   edit(){

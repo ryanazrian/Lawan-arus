@@ -20,6 +20,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class LoginYayasanPage {
     @ViewChild('email') email;
     @ViewChild('password') password;
+    angka =1;
 
 
   constructor(public navCtrl: NavController, 
@@ -53,12 +54,23 @@ export class LoginYayasanPage {
 
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
     .then( user => {
-       this.firedata.object('/data_donatur/'+ user.uid).subscribe(data =>{
+       this.firedata.object('/data_yayasan/'+ user.uid).subscribe(data =>{
          console.log(data);
-         this.data.login(data, "data_donatur");
-       })
-         this.alert("Login Sukses");
-         this.navCtrl.push(TabsYayasanPage)
+         this.data.login(data, "data_yayasan");
+
+         console.log(data.jenis);
+         if(data.jenis == 2){
+           if(this.angka ==1){
+                this.alert("Login Sukses");
+                this.navCtrl.push(TabsYayasanPage);
+                this.angka++;
+           }
+         }
+         else{
+           this.alert("Pastikan Akun Anda Benar");
+         }
+       });
+
     })
     .catch( error => {
       console.log('got an error', error);
