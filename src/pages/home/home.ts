@@ -90,9 +90,6 @@ export class HomePage {
   }
 
 
-
-  
-
     itemTapped(data) {
     this.navCtrl.push(DetailPage, data);
   }

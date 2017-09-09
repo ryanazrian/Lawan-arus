@@ -45,7 +45,7 @@ export class SumbanganPage {
     doAlert() {
     let alert = this.alerCtrl.create({
       title: 'Terima Kasih',
-      subTitle: 'Terima Kasih sudah meminta sumbangan, Tunggu donatur menyumbangkan barangnya',
+      subTitle: 'Terima Kasih sudah menyumbang, Yayasan akan segera menghubungi anda',
       buttons: ['Ok']
     })
      .present()
