@@ -22,12 +22,12 @@ import firebase from 'firebase';
   templateUrl: 'home.html',
 })
 export class HomePage {
-   nama_barang: string;
-   volume_barang: string;
-   berat_barang: string;
-   keterangan: string;
-   jenis_barang: string;
-   barang: any;
+   // nama_barang: string;
+   // volume_barang: string;
+   // berat_barang: string;
+   // keterangan: string;
+   // jenis_barang: string;
+   yayasan: any;
    // public barang_yayasan:Array<any>;
 
   // public option={
@@ -46,13 +46,11 @@ export class HomePage {
               public BarangProvider: BarangProvider
               ) {
     //this.Fbref=firebase.storage().ref()
-    this.firedata.list('data_barang_yayasan/uid').subscribe(data =>{
-        this.barang = data;
-        console.log(this.barang);
- 
+    const yayasan = this.firedata.list('/data_barang_yayasan/').subscribe(data =>{
+        console.log(data);
+        this.yayasan = data;
 
-
-    })
+    });
 
   }
 
@@ -93,11 +91,15 @@ export class HomePage {
 
 
 
-  detail(){
+  // detail(){
 
-  //this.navCtrl.setRoot(DetailPage);
-    this.navCtrl.push(DetailPage);
+  // //this.navCtrl.setRoot(DetailPage);
+  //   this.navCtrl.push(DetailPage);
 
+  // }
+
+    itemTapped(data) {
+    this.navCtrl.push(DetailPage, data);
   }
 
 }

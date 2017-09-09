@@ -4,7 +4,7 @@ import { LoginPage } from '../login-donatur/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { EditDonaturPage } from '../edit-donatur/edit-donatur';
-
+import { Data } from '../../providers/data';
 /**
  * Generated class for the ProfilPage page.
  *
@@ -21,6 +21,7 @@ export class ProfilPage {
   email: string;
   alamat: string;
   hp: string;
+  id_donatur: string;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
@@ -28,8 +29,17 @@ export class ProfilPage {
               public alertCtrl: AlertController, 
               private fire:AngularFireAuth, 
               private firedata: AngularFireDatabase,
+              public data: Data,
 
               ) {
+
+                // this.data.getRole().then(data =>{
+                //   this.nama = data.nama;
+                //   this.id_donatur = data.id;
+                //   this.email = data.email;
+                //   this.alamat = data.alamat;
+                //   this.hp = data.hp;
+                // })
                 var user = this.fire.auth.currentUser;
                 const donatur = this.firedata.object('/data_donatur/'+user.uid).subscribe(data =>{
                    this.nama = data.name;
