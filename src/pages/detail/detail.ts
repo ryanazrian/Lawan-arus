@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { SumbanganPage } from '../sumbangan/sumbangan';
 
 
 
@@ -19,6 +20,7 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
 export class DetailPage {
 	item: any;
 	donatur: string;
+	penerima: string;
 
   constructor(public navCtrl: NavController, 
   			  public navParams: NavParams,
@@ -46,12 +48,14 @@ export class DetailPage {
      .present()
   }
 
-  sumbang(){
- 	 	var user = this.fire.auth.currentUser;
- 	 	this.firedata.object('/data_barang_yayasan/'+this.item.$key)
- 	 	.update({donatur:1})
+  sumbang(penerima){
 
- 	 	this.doAlert();
+  		this.navCtrl.push(SumbanganPage, {penerima: this.item.$key});
+ 	 	// var user = this.fire.auth.currentUser;
+ 	 	// this.firedata.object('/data_barang_yayasan/'+this.item.$key)
+ 	 	// .update({donatur:1})
+
+ 	 	// this.doAlert();
   }
 
 }

@@ -46,7 +46,7 @@ export class HomePage {
               public BarangProvider: BarangProvider
               ) {
     //this.Fbref=firebase.storage().ref()
-    const yayasan = this.firedata.list('/data_barang_yayasan/').subscribe(data =>{
+    const yayasan = this.firedata.list('/data_yayasan/').subscribe(data =>{
         console.log(data);
         this.yayasan = data;
 
@@ -91,12 +91,7 @@ export class HomePage {
 
 
 
-  // detail(){
-
-  // //this.navCtrl.setRoot(DetailPage);
-  //   this.navCtrl.push(DetailPage);
-
-  // }
+  
 
     itemTapped(data) {
     this.navCtrl.push(DetailPage, data);
