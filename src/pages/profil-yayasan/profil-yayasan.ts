@@ -18,10 +18,12 @@ import { MainPage } from '../main/main';
   templateUrl: 'profil-yayasan.html',
 })
 export class ProfilYayasanPage {
-	nama: string;
+	namaYayasan: string;
+	namaPemilik: string;
+	nomorPonsel: number;
 	email: string;
 	alamat: string;
-	hp: string;
+	provinsi: string;
 
   constructor(public navCtrl: NavController, 
   			public navParams: NavParams,
@@ -33,10 +35,12 @@ export class ProfilYayasanPage {
   			) {
   			var user = this.fire.auth.currentUser;
   			const donatur = this.firedata.object('/data_yayasan/'+user.uid).subscribe(data =>{
-  				this.nama = data.name;
+  				this.namaYayasan = data.namaYayasan;
   				this.email = data.email;
   				this.alamat = data.alamat;
-  				this.hp = data.hp;
+					this.nomorPonsel = data.noHp;
+					this.namaPemilik = data.namaPemilik;
+					this.provinsi = data.provinsi;
   			})
   }
 

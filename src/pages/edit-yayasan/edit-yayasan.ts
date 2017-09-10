@@ -17,9 +17,10 @@ import { ProfilYayasanPage } from '../profil-yayasan/profil-yayasan';
   templateUrl: 'edit-yayasan.html',
 })
 export class EditYayasanPage {
-	nama: string;
-	alamat: string;
-	hp: string;
+	namapemilik: string;
+  email: string;
+  alamat: string;
+	hp: number;
 
   constructor(public navCtrl: NavController, 
   			public navParams: NavParams,	
@@ -32,9 +33,10 @@ export class EditYayasanPage {
 
               var user = this.fire.auth.currentUser;
           this.firedata.object('/data_yayasan/'+user.uid).subscribe(data=>{
-            this.nama = data.name;
+            this.namapemilik = data.namaPemilik;
             this.alamat= data.alamat;
-            this.hp = data.hp;
+            this.hp = data.noHp;
+            this.email = data.email;
             //this.email = data.email;
           })
   }
@@ -46,7 +48,8 @@ export class EditYayasanPage {
     edit(){
   		var user = this.fire.auth.currentUser;
   		this.firedata.object('/data_yayasan/'+user.uid).update({
-  			name: this.nama,
+        namaPemilik: this.namapemilik,
+        email: this.email,
         alamat: this.alamat,
         hp:this.hp
 
