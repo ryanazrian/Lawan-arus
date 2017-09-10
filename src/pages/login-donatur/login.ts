@@ -7,6 +7,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Data } from '../../providers/data';
 import { Http } from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { MainPage } from '../main/main';
 //import { LoggedInPage } from '../logged-in/logged-in';
 
 
@@ -26,6 +27,8 @@ export class LoginPage {
   @ViewChild('email') email;
   @ViewChild('password') password;
   @ViewChild('jenis') jenis;
+  yayasan:string;
+   angka=1;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -55,7 +58,16 @@ export class LoginPage {
 		this.navCtrl.push(TabsPage);
 
 	}*/
+<<<<<<< HEAD
     daftar(){
+=======
+back(){
+
+  this.navCtrl.setRoot(MainPage);
+}
+
+daftar(){
+>>>>>>> 26e964c4682bbc78873bd411de63cd94ae6c69a0
 
       //this.navCtrl.setRoot(TabsPage);
         this.navCtrl.push(RegisterPage);
@@ -77,9 +89,22 @@ export class LoginPage {
          console.log(data);
          this.data.login(data, "data_donatur");
 
-       })
-         this.alert('Success! You\'re logged in');
-         this.navCtrl.push(TabsPage);
+                
+         if(data.jenis == 1){
+           console.log(this.angka)
+           if(this.angka == 1 ){
+               this.alert('Success! You\'re logged in');
+               this.navCtrl.push(TabsPage);
+               this.angka++;
+           }
+       }
+         else{
+           this.alert('Pastikan Akun Anda Benar');
+         }
+
+       });
+
+        
     })
     .catch( error => {
       console.log('got an error', error);

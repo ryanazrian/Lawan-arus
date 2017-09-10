@@ -48,13 +48,14 @@ export class YayasanPostPage {
   post(){
       var user = this.fire.auth.currentUser; 
       this.firedata.list('/data_barang_yayasan/')
-        .push({ user: user.uid,  nama_barang: this.nama_barang.value, jenis_barang:this.jenis_barang, volume_barang: this.volume_barang.value, keterangan: this.keterangan.value});
+        .push({user: user.uid,  nama_barang: this.nama_barang.value, jenis_barang:this.jenis_barang, volume_barang: this.volume_barang.value, keterangan: this.keterangan.value});
       console.log('got data', user);
+   
 /*      console.log(this.nama_barang.value);
       console.log(this.volume_barang.value);
       console.log(this.berat_barang.value);
       console.log(this.keterangan.value);
-      console.log(this.jenis_barang)*/;
+      console.log(this.jenis_barang)*/
       this.doAlert();
       this.navCtrl.push(HistoryPage)
 

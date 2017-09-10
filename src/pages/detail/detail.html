@@ -14,24 +14,30 @@
 
     <ion-card-content>
       <ion-card-title>
-        {{item.nama_barang}}
+        {{item.name}}
       </ion-card-title>
       <p>
-        {{item.keterangan}}
+        {{item.alamat}}
       </p>
     </ion-card-content>
 
     <ion-row no-padding>
       <ion-col>
         <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Favorite
+          <!-- <ion-icon name='star'></ion-icon> -->
+          {{item.email}}
         </button>
       </ion-col>
       <ion-col text-center>
+<<<<<<< HEAD
         <button ion-button clear small color="danger" icon-start (click)='loadMap()'>
           <ion-icon name='locate'></ion-icon>
           Cek Alamat
+=======
+        <button ion-button clear small color="danger" icon-start>
+          <!-- <ion-icon name='musical-notes'></ion-icon> -->
+          {{item.hp}}
+>>>>>>> 26e964c4682bbc78873bd411de63cd94ae6c69a0
         </button>
       </ion-col>
       <ion-col text-right>
@@ -44,4 +50,12 @@
 
   </ion-card>      
 
+<<<<<<< HEAD
 </ion-content>
+=======
+    <div padding>
+      <button ion-button color="secondary" block (click)='sumbang()'>Sumbangkan</button>
+    </div>
+
+</ion-content>
+>>>>>>> 26e964c4682bbc78873bd411de63cd94ae6c69a0

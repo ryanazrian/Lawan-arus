@@ -25125,11 +25125,28 @@ page-list .back-button {
   color: #fff !important;
 }
 
+page-login .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-login .back-button {
+  color: #fff !important;
+}
+
 page-login ion-content img {
   display: block;
   width: 60vw;
   height: 60vw;
   margin: auto;
+}
+
+page-login .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
 }
 
 page-login .scroll-content {
@@ -25204,6 +25221,30 @@ page-login .item-md {
   background-color: #91aec3;
   box-shadow: none;
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-login-kurir .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-login-kurir .back-button {
+  color: #fff !important;
+}
+
+page-login-kurir ion-content img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+page-login-kurir .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
 }
 
 page-login-kurir ion-content img {
@@ -25281,6 +25322,30 @@ page-login-kurir .item-md {
   background-color: #91aec3;
   box-shadow: none;
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+page-login-yayasan .toolbar-background {
+  background: #1B607C;
+  border-color: transparent;
+}
+
+page-login-yayasan .back-button {
+  color: #fff !important;
+}
+
+page-login-yayasan ion-content img {
+  display: block;
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+page-login-yayasan .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  pointer-events: auto;
 }
 
 page-login-yayasan ion-content img {

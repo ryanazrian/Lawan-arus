@@ -1,4 +1,28 @@
 page-login-kurir {
+
+		 .toolbar-background {
+		  background: #1B607C;
+		  border-color: transparent;
+		}
+
+		.back-button {
+  		color: #fff !important;
+		}
+
+	ion-content img {
+  		display: block;
+  		width: 60vw;
+  		height : 60vw;
+  		margin: auto;
+	}
+
+			.toolbar-title {
+		  font-size: 2.3rem;
+		  font-weight: 600;
+		  text-align: center;
+		  color: #fff;
+		  pointer-events: auto;
+		}
 ion-content img {
   		display: block;
   		width: 60vw;

@@ -25,7 +25,11 @@ export class RegisterYayasanPage {
     @ViewChild('nama') nama;
     @ViewChild('alamat') alamat;
     @ViewChild('hp') hp;
+    @ViewChild('namapemilik') namapemilik;
     @ViewChild('jenis') jenis;
+   // @ViewChild('provinsi') provinsi;
+   provinsi:string;
+
 
 
     yayasan : FirebaseObjectObservable<any[]>;
@@ -53,9 +57,11 @@ export class RegisterYayasanPage {
               ) {
     this.formone = formBuilder.group({
         nama: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        namapemilik: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         hp: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[0-9]*'), Validators.required])],
         email: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})'), Validators.required])],
         password: ['', Validators.compose([Validators.maxLength(15), Validators.minLength(6), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+        provinsi: ['', Validators.compose([Validators.required])],
         password1: ['']
     }, {
       validator: RegisterYayasanPage.MatchPassword // your validation method
@@ -80,7 +86,7 @@ export class RegisterYayasanPage {
     this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value)
     .then(data => {
       const yayasan = this.firedata.object('/data_yayasan/'+ data.uid);
-      yayasan.set({id:data.uid, name: this.nama.value, email: this.email.value, alamat:this.alamat.value, hp:this.hp.value, jenis:2})
+      yayasan.set({id:data.uid, namaYayasan: this.nama.value, provinsi: this.provinsi, namaPemilik: this.namapemilik.value, email: this.email.value, alamat:this.alamat.value, noHp:this.hp.value, jenis:2})
       console.log('got data', data);
       this.alert('Registered!');
       this.navCtrl.setRoot(LoginYayasanPage);

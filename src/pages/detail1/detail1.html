@@ -14,24 +14,23 @@
 
     <ion-card-content>
       <ion-card-title>
-        Tv
+        {{item.nama_barang}}
       </ion-card-title>
       <p>
-        Minta Tv gengs
+        {{item.keterangan}}
       </p>
     </ion-card-content>
 
     <ion-row no-padding>
       <ion-col>
         <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Favorite
+          {{item.jenis_barang}}
         </button>
       </ion-col>
       <ion-col text-center>
         <button ion-button clear small color="danger" icon-start>
           <ion-icon name='musical-notes'></ion-icon>
-          Listen
+          {{item.volume_barang}}
         </button>
       </ion-col>
       <ion-col text-right>
