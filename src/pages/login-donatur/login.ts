@@ -27,10 +27,10 @@ export class LoginPage {
   @ViewChild('password') password;
   @ViewChild('jenis') jenis;
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams, 
-              public alertCtrl: AlertController, 
-              private fire:AngularFireAuth, 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public alertCtrl: AlertController,
+              private fire:AngularFireAuth,
               private firedata: AngularFireDatabase,
               public data: Data,
               public loadingCtrl: LoadingController
@@ -55,12 +55,12 @@ export class LoginPage {
 		this.navCtrl.push(TabsPage);
 
 	}*/
-daftar(){
+    daftar(){
 
-  //this.navCtrl.setRoot(TabsPage);
-    this.navCtrl.push(RegisterPage);
+      //this.navCtrl.setRoot(TabsPage);
+        this.navCtrl.push(RegisterPage);
 
-  }
+      }
 
     login() {
 
@@ -70,7 +70,7 @@ daftar(){
       duration: 3000
     });
     loader.present();
-    
+
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
     .then( user => {
        this.firedata.object('/data_donatur/'+ user.uid).subscribe(data =>{
@@ -84,7 +84,7 @@ daftar(){
     .catch( error => {
       console.log('got an error', error);
       this.alert(error.message);
-    })  
+    })
     console.log('Would sign in with ', this.email.value, this.password.value);
   }
 }

@@ -38,8 +38,8 @@ export class HomePage {
 
   // public Fbref:any;
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams, 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
               public app: App, public alertCtrl: AlertController,
               private fire: AngularFireAuth,
               private firedata: AngularFireDatabase,
@@ -97,6 +97,8 @@ export class HomePage {
   //   this.navCtrl.push(DetailPage);
 
   // }
+
+
 
     itemTapped(data) {
     this.navCtrl.push(DetailPage, data);

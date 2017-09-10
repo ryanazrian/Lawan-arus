@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MapsPage } from '../maps/maps';
 
 /**
  * Generated class for the DetailPage page.
@@ -21,11 +22,14 @@ export class DetailPage {
               this.item = this.navParams.data;
               console.log(this.item);
             }
-
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
+  }
+
+  loadMap(){
+    this.navCtrl.push(MapsPage);
   }
 
 }

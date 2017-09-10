@@ -7,7 +7,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IonicStorageModule } from '@ionic/storage';
 import { Camera, File } from 'ionic-native';
-import { BarangProvider } from '../providers/data_barang_yayasan'; 
+import { BarangProvider } from '../providers/data_barang_yayasan';
+import { Geolocation, GeolocationOptions ,Geoposition ,PositionError }  from '@ionic-native/geolocation';
+
 
 // Http import
 import { HttpModule } from '@angular/http';
@@ -51,6 +53,7 @@ import { LoggedInPage } from '../pages/logged-in/logged-in';
 import { EditDonaturPage } from '../pages/edit-donatur/edit-donatur';
 import { ProfilYayasanPage } from '../pages/profil-yayasan/profil-yayasan';
 import { EditYayasanPage } from '../pages/edit-yayasan/edit-yayasan';
+import { MapsPage } from '../pages/maps/maps';
 import { Data } from '../providers/data';
 
 // Service imports
@@ -109,7 +112,8 @@ const firebaseAuth = {
     LoggedInPage,
     EditDonaturPage,
     ProfilYayasanPage,
-    EditYayasanPage
+    EditYayasanPage,
+    MapsPage
   ],
   imports: [
     BrowserModule,
@@ -160,7 +164,8 @@ const firebaseAuth = {
     LoggedInPage,
     EditDonaturPage,
     ProfilYayasanPage,
-    EditYayasanPage
+    EditYayasanPage,
+    MapsPage
   ],
   providers: [
     StatusBar, //save data
@@ -170,6 +175,7 @@ const firebaseAuth = {
     Data,
     Camera,
     BarangProvider,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
